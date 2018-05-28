@@ -10,6 +10,9 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.wikitude.phonegapsamples"
     },
+    "com.wikitude.phonegap.WikitudePlugin": {
+      "PACKAGE_NAME": "com.wikitude.phonegapsamples"
+    },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.wikitude.phonegapsamples"
     }

@@ -13,6 +13,10 @@
               "count": 1
             },
             {
+              "xml": "<feature name=\"WikitudePlugin\"><param name=\"android-package\" value=\"com.wikitude.phonegap.WikitudePlugin\" /></feature>",
+              "count": 1
+            },
+            {
               "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
@@ -25,8 +29,70 @@
       },
       "AndroidManifest.xml": {
         "parents": {
-          "/manifest": [],
-          "/manifest/application": [],
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_LOCATION_EXTRA_COMMANDS\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_GPS\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:glEsVersion=\"0x00020000\" android:required=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.location\" android:required=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.sensor.accelerometer\" android:required=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.sensor.compass\" android:required=\"true\" />",
+              "count": 1
+            }
+          ],
+          "/manifest/application": [
+            {
+              "xml": "<activity android:name=\"com.wikitude.tools.activities.MediaPlayerActivity\" android:screenOrientation=\"landscape\"><intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter></activity>",
+              "count": 1
+            }
+          ],
           "/*": [
             {
               "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
@@ -41,12 +107,23 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.wikitude.phonegapsamples"
     },
+    "com.wikitude.phonegap.WikitudePlugin": {
+      "PACKAGE_NAME": "com.wikitude.phonegapsamples"
+    },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.wikitude.phonegapsamples"
     }
   },
   "dependent_plugins": {},
   "modules": [
+    {
+      "id": "com.wikitude.phonegap.WikitudePlugin.WikitudePlugin",
+      "file": "plugins/com.wikitude.phonegap.WikitudePlugin/www/WikitudePlugin.js",
+      "pluginId": "com.wikitude.phonegap.WikitudePlugin",
+      "clobbers": [
+        "WikitudePlugin"
+      ]
+    },
     {
       "id": "cordova-plugin-file.DirectoryEntry",
       "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
@@ -223,6 +300,7 @@
   ],
   "plugin_metadata": {
     "cordova-plugin-whitelist": "1.3.3",
+    "com.wikitude.phonegap.WikitudePlugin": "7.2.1",
     "cordova-plugin-file": "6.0.1"
   }
 }

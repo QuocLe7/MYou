@@ -19,6 +19,7 @@
     "cordova": {
         "plugins": {
             "cordova-plugin-whitelist": {},
+            "com.wikitude.phonegap.WikitudePlugin": {},
             "cordova-plugin-file": {}
         },
         "platforms": [

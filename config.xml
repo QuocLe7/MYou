@@ -24,6 +24,9 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <engine name="ios" spec="~4.5.4" />
+    <engine name="android" spec="~7.0.0" />
+    <plugin name="com.wikitude.phonegap.WikitudePlugin" spec="https://github.com/Wikitude/wikitude-cordova-plugin.git" />
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <engine name="ios" spec="^4.5.4" />
     <engine name="android" spec="^7.0.0" />
