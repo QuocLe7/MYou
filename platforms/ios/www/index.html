@@ -187,9 +187,24 @@
 
 		<script type="text/javascript">
 
-		$( "#url-button" ).bind( "click", function(event, ui) {
-			app.loadCustomARchitectWorldFromURL($("#url").val());
-		});
+$("#url-button").bind("click", function (event, ui) {
+                      //app.loadCustomARchitectWorldFromURL($("#url").val());
+                      navigator.camera.getPicture(onSuccess, onFail, {quality: 50,
+                                                  sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+                                                  allowEdit: true,
+                                                  destinationType: Camera.DestinationType.FILE_URI
+                                                  });
+                      });
+                      
+                      // Change image source
+                      function onSuccess(imageData) {
+                          var image = document.getElementById('img');
+                          //TODO: process uploading target image here
+                      }
+        
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
 		</script>
 	</body>
 </html>
