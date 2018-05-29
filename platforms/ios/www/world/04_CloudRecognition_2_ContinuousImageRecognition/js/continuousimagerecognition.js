@@ -16,7 +16,7 @@ var World = {
 		function trackerError() is called instead.
 	*/
 	createTracker: function createTrackerFn() {
-		World.cloudRecognitionService = new AR.CloudRecognitionService("b277eeadc6183ab57a83b07682b3ceba", "54e4b9fe6134bb74351b2aa3", {
+        World.cloudRecognitionService = new AR.CloudRecognitionService("9c00b7ff180b0f7b05fd4716e5761824", "5af94cbd370bf172d94ec405", {
 			onInitialized: this.trackerLoaded,
 			onError: this.trackerError
 		});
